@@ -2,12 +2,20 @@ const express = require('express');
 const app = express();
 const port = 3000;
 app.use(express.json());
+
 // use coros 
 const cors = require('cors');
 app.use(cors());
 
+
+// database willl be 
+
+
+
+
 // Routes 
 const addOrder = require('./routes/addOrder');
+
 
 
 app.get('/', (req, res) => {
