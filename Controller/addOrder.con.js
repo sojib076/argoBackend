@@ -3,16 +3,14 @@ const {  ObjectId } = require('mongodb');
 
 const db = client.db('products');
 const collection = db.collection('orders');
+
 exports.addSingleOrder = async (req, res) => {
     try {
-       
         const  body = req.body;
         
-
         const result = await collection.insertOne(body);
         res.send(result);
 
-        
       
     } catch (error) {
 

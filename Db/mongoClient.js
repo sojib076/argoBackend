@@ -9,8 +9,12 @@ client.connect(err => {
         console.log('Error connecting to the database');
     } else {
         console.log('Connected to the database');
+
         
     }
 });
 
 module.exports = client;
+
+console.log(process.env.SECRET_Name);
+console.log(process.env.SECRET_Pass);

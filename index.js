@@ -6,6 +6,7 @@ require('dotenv').config();
 
 // use coros 
 const cors = require('cors');
+app.use(cors());
 
 
 
@@ -16,6 +17,7 @@ const cors = require('cors');
 
 // Routes 
 const addOrder = require('./routes/addOrder');
+const addUser = require('./routes/addUsers');
 
 
 
@@ -24,6 +26,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1/order', addOrder);
+app.use('/api/v1/user', addUser);
 
 // Error handler middleware
 app.use((err, req, res, next) => {
